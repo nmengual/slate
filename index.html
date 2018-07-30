@@ -228,6 +228,9 @@
             <a href="#productos" class="toc-h1 toc-link" data-title="productos">Productos</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#obtener-ids-de-los-atributos" class="toc-h2 toc-link" data-title="obtener-ids-de-los-atributos">Obtener ids de los atributos</a>
+                  </li>
+                  <li>
                     <a href="#anadir-nuevo-producto" class="toc-h2 toc-link" data-title="anadir-nuevo-producto">Añadir nuevo producto</a>
                   </li>
                   <li>
@@ -289,7 +292,130 @@
 <aside class="notice">
 Debes reemplazar <code>token</code> con tu API key.
 </aside>
-<h1 id='productos'>Productos</h1><h2 id='anadir-nuevo-producto'>Añadir nuevo producto</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+<h1 id='productos'>Productos</h1><h2 id='obtener-ids-de-los-atributos'>Obtener ids de los atributos</h2>
+<blockquote>
+<p>Como obtener el listado de idiomas disponibles</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://edisofer.xper-enti.com/rest/V1/products/attributes/idioma <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer token'</span> <span class="se">\</span>
+  -H <span class="s1">'Cache-Control: no-cache'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>La petición devuelve el siguiente JSON:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"is_wysiwyg_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_html_allowed_on_front"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"used_for_sort_by"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_filterable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_filterable_in_search"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_used_in_grid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_visible_in_grid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_filterable_in_grid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apply_to"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"is_searchable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_visible_in_advanced_search"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_comparable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_used_for_promo_rules"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_visible_on_front"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"used_in_product_listing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"store"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attribute_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">139</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idioma"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"frontend_input"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"entity_type_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">" "</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Polaco"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Japones"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Inglés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Francés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Árabe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Español-Alemán"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Catalán"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bilingüe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alemán"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Portugués"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multilingüe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Italiano"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inglés-Francés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inglés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Holandés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francés"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"is_user_defined"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"default_frontend_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Idioma"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"frontend_labels"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"backend_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"source_model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magento</span><span class="se">\\</span><span class="s2">Eav</span><span class="se">\\</span><span class="s2">Model</span><span class="se">\\</span><span class="s2">Entity</span><span class="se">\\</span><span class="s2">Attribute</span><span class="se">\\</span><span class="s2">Source</span><span class="se">\\</span><span class="s2">Table"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"default_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_unique"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"validation_rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p>Los valores posibles para atributo son: idioma y formato</p>
+
+<p>GET https://edisofer.xper-enti.com/rest/V1/products/attributes/{atributo}</p>
+<h2 id='anadir-nuevo-producto'>Añadir nuevo producto</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
   https://edisofer.xper-enti.com/rest/V1/products/ <span class="se">\</span>
   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Authorization: Bearer token'</span> <span class="se">\</span>
@@ -297,17 +423,65 @@ Debes reemplazar <code>token</code> con tu API key.
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -d <span class="s1">'{
     "product": {
-        "sku": "123456",
-        "name": "Producto de prueba",
+        "sku": "654321",
+        "name": "Producto de prueba con stock",
         "price": 10.00,
         "type_id": "simple",
         "attribute_set_id": 4,
-    "custom_attributes": [
-        {
-            "attribute_code": "category_ids",
-            "value": [1, 2, 3]
-        }
-    ]
+        "extension_attributes": {
+            "stock_item": {
+                "manage_stock": 1,
+                "min_sale_qty": 1,
+                "is_in_stock": 0,
+                "qty": 15
+            }
+        },
+        "custom_attributes": [
+            {
+                "attribute_code": "description",
+                "value": "Prueba de descripción"
+            },
+            {
+                "attribute_code": "autor",
+                "value": "Prueba de autor"
+            },
+            {
+                "attribute_code": "edicion",
+                "value": "2012-12-25 00:00:00"
+            },
+            {
+                "attribute_code": "idioma",
+                "value": "4"
+            },
+            {
+                "attribute_code": "formato",
+                "value": "Libro"
+            },
+      {
+        "attribute_code": "encuadernacion",
+                "value": "Cartoné"
+      },
+      {
+        "attribute_code": "paginas",
+                "value": "250"
+      },
+      {
+        "attribute_code": "coleccion",
+                "value": "Urbanismo, Derecho"
+      },
+      {
+        "attribute_code": "indicetexto",
+                "value": "&lt;p&gt;Contenido del indice&lt;/p&gt;"
+      },
+      {
+        "attribute_code": "autores",
+                "value": "Otros autores"
+      },
+            {
+        "attribute_code": "category_ids",
+        "value": [3951]
+            }
+        ]
     }
 }'</span>
 </code></pre>
@@ -315,19 +489,25 @@ Debes reemplazar <code>token</code> con tu API key.
 <p>La petición devuelve el siguiente JSON:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">66163</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Producto de prueba"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">66170</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"654321"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Producto de prueba con stock"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attribute_set_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
     </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-05 08:44:56"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-05 09:11:09"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-11 07:20:24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-11 07:20:24"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"website_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="mi">1</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"category_links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3951"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"product_links"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
@@ -336,8 +516,14 @@ Debes reemplazar <code>token</code> con tu API key.
     </span><span class="s2">"tier_prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
     </span><span class="s2">"custom_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Prueba de descripción"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category_ids"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"3951"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"options_container"</span><span class="p">,</span><span class="w">
@@ -353,11 +539,19 @@ Debes reemplazar <code>token</code> con tu API key.
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url_key"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"producto-de-prueba"</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"producto-de-prueba-con-stock"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tax_class_id"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"autor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Prueba de autor"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edicion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-12-25 00:00:00"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idioma"</span><span class="p">,</span><span class="w">
@@ -366,10 +560,30 @@ Debes reemplazar <code>token</code> con tu API key.
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"formato"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coleccion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Urbanismo, Derecho"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paginas"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"250"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indicetexto"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Contenido del indice&lt;/p&gt;"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"encuadernacion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cartoné"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attribute_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"autores"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Otros autores"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p>POST https://edisofer.xper-enti.com/rest/V1/products</p>
 <h3 id='campos-de-quot-product-quot'>Campos de &quot;product&quot;</h3>
 <table><thead>
@@ -411,7 +625,9 @@ Debes reemplazar <code>token</code> con tu API key.
 </tr>
 </tbody></table>
 <h3 id='1-campos-de-quot-custom_attributes-quot'>(1) Campos de &quot;custom_attributes&quot;</h3>
-<p>Todos los valores del array de custom_attributes se componen de la siguiente estructura:</p>
+<p>Para obtener los valores de los atributos (formato y idioma) consultar la sección &quot;obtener ids de los atributos&quot;.
+Para obtener los valores de category_ids (categoría/editorial) consultar la sección &quot;Obtener categoría por nombre&quot;.
+Todos los valores del array de custom_attributes se componen de la siguiente estructura:</p>
 
 <table><thead>
 <tr>
@@ -429,6 +645,35 @@ Debes reemplazar <code>token</code> con tu API key.
 <td>value</td>
 <td>multi</td>
 <td>Valor del atributo</td>
+</tr>
+</tbody></table>
+<h3 id='2-campos-de-quot-extension_attributes-stock_item-quot'>(2) Campos de &quot;extension_attributes.stock_item&quot;</h3>
+<table><thead>
+<tr>
+<th>Campos</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>manage_stock</td>
+<td>int</td>
+<td>Si el producto gestiona stock (1) por defecto</td>
+</tr>
+<tr>
+<td>min_sale_qty</td>
+<td>int</td>
+<td>Cantidad mínima de artículos en el carrito de compras para ser vendidos</td>
+</tr>
+<tr>
+<td>is_in_stock</td>
+<td>int</td>
+<td>Define si el producto está disponible para vender</td>
+</tr>
+<tr>
+<td>qty</td>
+<td>int</td>
+<td>Cantidad de artículos en existencia para el producto actual</td>
 </tr>
 </tbody></table>
 <h2 id='editar-un-producto'>Editar un producto</h2>
@@ -451,7 +696,7 @@ Debes reemplazar <code>token</code> con tu API key.
 <p>La petición devuelve el siguiente JSON:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="kc">true</span><span class="w">
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p>PUT https://edisofer.xper-enti.com/rest/all/V1/products/{sku}</p>
 <h2 id='eliminar-un-producto'>Eliminar un producto</h2>
 <blockquote>
@@ -466,7 +711,7 @@ Debes reemplazar <code>token</code> con tu API key.
 <p>La petición devuelve el siguiente JSON:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="kc">true</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p>DELETE https://edisofer.xper-enti.com/rest/V1/products/{sku}</p>
 <h1 id='categorias'>Categorías</h1><h2 id='anadir-nueva-categoria'>Añadir nueva categoría</h2>
 <blockquote>
@@ -523,7 +768,7 @@ Debes reemplazar <code>token</code> con tu API key.
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
 <p>POST https://edisofer.xper-enti.com/rest/V1/categories</p>
 <h3 id='campos-de-quot-category-quot'>Campos de &quot;category&quot;</h3>
 <table><thead>
@@ -602,7 +847,7 @@ Debes reemplazar <code>token</code> con tu API key.
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
 <p>PUT https://edisofer.xper-enti.com/rest/all/V1/categories/{ID}</p>
 <h2 id='eliminar-una-categoria'>Eliminar una categoría</h2>
 <blockquote>
@@ -618,7 +863,7 @@ Debes reemplazar <code>token</code> con tu API key.
 <p>La petición devuelve el siguiente JSON:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="kc">true</span><span class="w">
-</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
 <p>DELETE https://edisofer.xper-enti.com/rest/V1/categories/{ID}</p>
 <h2 id='obtener-categoria-por-nombre'>Obtener categoría por nombre</h2>
 <blockquote>
@@ -687,7 +932,7 @@ Debes reemplazar <code>token</code> con tu API key.
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
 <p>GET https://edisofer.xper-enti.com/rest/V1/categories/list?searchCriteria[filterGroups][0][filters][0][field]=name&amp;searchCriteria[filterGroups][0][filters][0][value]=</p>
 <h3 id='parametros-de-la-peticion'>Parámetros de la petición</h3>
 <table><thead>
